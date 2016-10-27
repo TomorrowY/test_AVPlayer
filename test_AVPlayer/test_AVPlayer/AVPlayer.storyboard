@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CustomAV Player-->
+        <scene sceneID="Yq3-Ko-aWM">
+            <objects>
+                <viewController storyboardIdentifier="CustomAVPlayer" id="cKi-g8-elE" customClass="CustomAVPlayer" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8sg-zi-CbA"/>
+                        <viewControllerLayoutGuide type="bottom" id="ltK-4v-Qpg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DX5-FK-hIE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHr-hk-TBK">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="UcH-yz-g8y"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fHr-hk-TBK" firstAttribute="leading" secondItem="DX5-FK-hIE" secondAttribute="leading" id="LfC-FU-T1c"/>
+                            <constraint firstAttribute="trailing" secondItem="fHr-hk-TBK" secondAttribute="trailing" id="Zu6-Ad-pIT"/>
+                            <constraint firstItem="fHr-hk-TBK" firstAttribute="top" secondItem="8sg-zi-CbA" secondAttribute="bottom" id="bmf-Ea-XoR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="displayMovieView" destination="fHr-hk-TBK" id="y1i-iK-BWI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lad-XU-eCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26" y="115"/>
+        </scene>
+    </scenes>
+</document>

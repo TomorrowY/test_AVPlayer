@@ -17,6 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(statusBarOrientationDidChange:) name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(statusBarOrientationWillChange:) name:UIApplicationWillChangeStatusBarOrientationNotification object:nil];
+    
+    //
+    UIInterfaceOrientation interfaceOrientation = [UIApplication sharedApplication].statusBarOrientation ;
+}
+
+- (void)statusBarOrientationDidChange:(NSNotification *)notification {
+//    NSLog(@"statusBarOrientationDidChange");
+}
+
+- (void)statusBarOrientationWillChange:(NSNotification *)notification {
+//    NSLog(@"statusBarOrientationWillChange");
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,7 +39,7 @@
 #pragma mark -- UITraitEnvironment method override
 
 - (void)traitCollectionDidChange:(nullable UITraitCollection *)previousTraitCollection NS_AVAILABLE_IOS(8_0) {
-    NSLog(@"%@",previousTraitCollection);
+    NSLog(@"previousTraitCollection:%@",previousTraitCollection);
 }
 
 @end

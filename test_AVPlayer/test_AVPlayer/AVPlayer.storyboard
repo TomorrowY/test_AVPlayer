@@ -34,17 +34,31 @@
                                             <action selector="onPlayerClicked:" destination="cKi-g8-elE" eventType="touchUpInside" id="gfR-kR-cbc"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slR-la-ADi">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="slR-la-ADi" secondAttribute="height" id="ZjG-OL-QeN"/>
+                                        </constraints>
+                                        <state key="normal" image="icon_common_video_play_normal"/>
+                                        <state key="selected" image="icon_common_video_stop_normal"/>
+                                        <connections>
+                                            <action selector="onPlayerClicked:" destination="cKi-g8-elE" eventType="touchUpInside" id="bg8-5C-1Hb"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="slR-la-ADi" firstAttribute="top" secondItem="qgG-KP-ym5" secondAttribute="top" constant="-8" id="N9t-vO-z0b"/>
+                                    <constraint firstAttribute="bottom" secondItem="slR-la-ADi" secondAttribute="bottom" constant="8" id="awU-xe-iEk"/>
+                                    <constraint firstAttribute="trailing" secondItem="slR-la-ADi" secondAttribute="trailing" id="cbK-xB-cub"/>
                                     <constraint firstItem="61l-eD-51C" firstAttribute="top" secondItem="qgG-KP-ym5" secondAttribute="top" id="dRJ-tz-mCQ"/>
                                     <constraint firstAttribute="height" constant="45" id="dZa-pU-OuP"/>
                                     <constraint firstAttribute="bottom" secondItem="61l-eD-51C" secondAttribute="bottom" id="ebh-h8-vC3"/>
+                                    <constraint firstItem="slR-la-ADi" firstAttribute="width" secondItem="slR-la-ADi" secondAttribute="height" id="kuE-TJ-x3m"/>
                                     <constraint firstItem="61l-eD-51C" firstAttribute="leading" secondItem="qgG-KP-ym5" secondAttribute="leading" id="yAe-t8-86x"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="fHr-hk-TBK" firstAttribute="leading" secondItem="DX5-FK-hIE" secondAttribute="leading" id="LfC-FU-T1c"/>
                             <constraint firstItem="qgG-KP-ym5" firstAttribute="leading" secondItem="DX5-FK-hIE" secondAttribute="leading" id="Yvu-It-bL8"/>
@@ -70,6 +84,8 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="bottomViewLeadingContraint" destination="Yvu-It-bL8" id="Q2X-IM-EzY"/>
+                        <outlet property="displayLeadingConstraint" destination="LfC-FU-T1c" id="jk3-vn-IXr"/>
                         <outlet property="displayMovieView" destination="fHr-hk-TBK" id="y1i-iK-BWI"/>
                         <outlet property="playerbtn" destination="61l-eD-51C" id="C0x-H8-ObX"/>
                     </connections>

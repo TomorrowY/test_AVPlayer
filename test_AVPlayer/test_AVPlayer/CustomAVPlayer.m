@@ -9,7 +9,16 @@
 #import "CustomAVPlayer.h"
 #import <AVFoundation/AVFoundation.h>
 
+#define NavigationBar_Height 64
+#define Top_Height_Zero 0
+
 @interface CustomAVPlayer ()
+{
+    BOOL _hasRotate;
+}
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *displayLeadingConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomViewLeadingContraint;
+
 @property (weak, nonatomic) IBOutlet UIView *displayMovieView;
 @property (nonatomic) AVPlayer *player;
 @property (nonatomic) AVPlayerLayer *playerLayer;
@@ -28,7 +37,7 @@
 }
 
 - (void)initUIKit {
-  
+    _hasRotate = false;
 }
 
 - (void)onBackClicked:(UIBarButtonItem *)sender {
@@ -61,7 +70,24 @@
 
 - (IBAction)toRotateClicked:(id)sender {
     NSLog(@"选装屏幕");
-    
+    _hasRotate = !_hasRotate;
+    if (_hasRotate) {
+        CGRect frame = CGRectMake(0, 0, [UIApplication sharedApplication].keyWindow.frame.size.height, [UIApplication sharedApplication].keyWindow.frame.size.width);
+        self.view.bounds = CGRectMake(0, 0, CGRectGetWidth(frame), CGRectGetHeight(frame));
+        self.view.transform = CGAffineTransformMakeRotation(M_PI_2);
+        self.displayLeadingConstraint.constant = NavigationBar_Height;
+        self.bottomViewLeadingContraint.constant = NavigationBar_Height;
+        [self.view layoutIfNeeded];
+        self.playerLayer.frame = self.displayMovieView.bounds;
+    }else{
+        CGRect frame=CGRectMake(0, 0, [UIApplication sharedApplication].keyWindow.frame.size.width, [UIApplication sharedApplication].keyWindow.frame.size.height);
+        self.view.bounds = CGRectMake(0, 0, frame.size.width, frame.size.height);
+        self.view.transform = CGAffineTransformMakeRotation(0);
+        self.displayLeadingConstraint.constant = Top_Height_Zero;
+        self.bottomViewLeadingContraint.constant = Top_Height_Zero;
+        [self.view layoutIfNeeded];
+        self.playerLayer.frame = self.displayMovieView.bounds;
+    }
 }
 
 - (void)testInfo {
@@ -71,7 +97,6 @@
     NSLog(@"error : %@",error);
     
 #pragma mark -- AVPlayer (AVPlayerPlaybackControl)
-    
     CGFloat rate = self.player.rate;
 //    - (void)play;
 //    - (void)pause;
@@ -92,8 +117,6 @@
         [self.player pause];
     }
  
-    
-    UITraitCollection
 }
 
 - (void)didReceiveMemoryWarning {

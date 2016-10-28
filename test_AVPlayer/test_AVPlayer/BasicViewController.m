@@ -23,7 +23,7 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark -- UITraitEnvironment
+#pragma mark -- UITraitEnvironment method override
 
 - (void)traitCollectionDidChange:(nullable UITraitCollection *)previousTraitCollection NS_AVAILABLE_IOS(8_0) {
     NSLog(@"%@",previousTraitCollection);

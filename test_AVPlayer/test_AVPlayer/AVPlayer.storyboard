@@ -34,26 +34,12 @@
                                             <action selector="onPlayerClicked:" destination="cKi-g8-elE" eventType="touchUpInside" id="gfR-kR-cbc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slR-la-ADi">
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="slR-la-ADi" secondAttribute="height" id="ZjG-OL-QeN"/>
-                                        </constraints>
-                                        <state key="normal" image="icon_common_video_play_normal"/>
-                                        <state key="selected" image="icon_common_video_stop_normal"/>
-                                        <connections>
-                                            <action selector="onPlayerClicked:" destination="cKi-g8-elE" eventType="touchUpInside" id="bg8-5C-1Hb"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="slR-la-ADi" firstAttribute="top" secondItem="qgG-KP-ym5" secondAttribute="top" constant="-8" id="N9t-vO-z0b"/>
-                                    <constraint firstAttribute="bottom" secondItem="slR-la-ADi" secondAttribute="bottom" constant="8" id="awU-xe-iEk"/>
-                                    <constraint firstAttribute="trailing" secondItem="slR-la-ADi" secondAttribute="trailing" id="cbK-xB-cub"/>
                                     <constraint firstItem="61l-eD-51C" firstAttribute="top" secondItem="qgG-KP-ym5" secondAttribute="top" id="dRJ-tz-mCQ"/>
                                     <constraint firstAttribute="height" constant="45" id="dZa-pU-OuP"/>
                                     <constraint firstAttribute="bottom" secondItem="61l-eD-51C" secondAttribute="bottom" id="ebh-h8-vC3"/>
-                                    <constraint firstItem="slR-la-ADi" firstAttribute="width" secondItem="slR-la-ADi" secondAttribute="height" id="kuE-TJ-x3m"/>
                                     <constraint firstItem="61l-eD-51C" firstAttribute="leading" secondItem="qgG-KP-ym5" secondAttribute="leading" id="yAe-t8-86x"/>
                                 </constraints>
                             </view>

@@ -20,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,7 +29,6 @@
 }
 
 - (IBAction)toCustomAvPlayerClicked:(id)sender {
-
     CustomAVPlayer *CAVPlayer = [[UIStoryboard storyboardWithName:@"AVPlayer" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([CustomAVPlayer class])];
     if (self.navigationController) {
         [self.navigationController pushViewController:CAVPlayer animated:true];
@@ -35,7 +36,6 @@
     else{
         [self presentViewController:CAVPlayer animated:true completion:nil];
     }
-    
 }
 
 @end

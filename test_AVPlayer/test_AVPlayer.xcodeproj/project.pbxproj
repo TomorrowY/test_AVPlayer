@@ -10,6 +10,7 @@
 		DC1148951DC6F814002B0D0D /* PlayItemService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1148941DC6F814002B0D0D /* PlayItemService.m */; };
 		DC1148981DC6FA13002B0D0D /* AVSynchronizedLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1148971DC6FA13002B0D0D /* AVSynchronizedLayerController.m */; };
 		DC11489B1DC71E66002B0D0D /* PlayItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11489A1DC71E66002B0D0D /* PlayItemViewController.m */; };
+		DC11489E1DC73190002B0D0D /* AVQueuePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11489D1DC73190002B0D0D /* AVQueuePlayerViewController.m */; };
 		DC50B9961DC1FC2800F027EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC50B9951DC1FC2800F027EB /* main.m */; };
 		DC50B9991DC1FC2800F027EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC50B9981DC1FC2800F027EB /* AppDelegate.m */; };
 		DC50B99C1DC1FC2800F027EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC50B99B1DC1FC2800F027EB /* ViewController.m */; };
@@ -47,6 +48,8 @@
 		DC1148971DC6FA13002B0D0D /* AVSynchronizedLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSynchronizedLayerController.m; sourceTree = "<group>"; };
 		DC1148991DC71E65002B0D0D /* PlayItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayItemViewController.h; sourceTree = "<group>"; };
 		DC11489A1DC71E66002B0D0D /* PlayItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayItemViewController.m; sourceTree = "<group>"; };
+		DC11489C1DC73190002B0D0D /* AVQueuePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVQueuePlayerViewController.h; sourceTree = "<group>"; };
+		DC11489D1DC73190002B0D0D /* AVQueuePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVQueuePlayerViewController.m; sourceTree = "<group>"; };
 		DC50B9911DC1FC2800F027EB /* test_AVPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test_AVPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC50B9951DC1FC2800F027EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DC50B9971DC1FC2800F027EB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -172,6 +175,8 @@
 				DC1148971DC6FA13002B0D0D /* AVSynchronizedLayerController.m */,
 				DC1148991DC71E65002B0D0D /* PlayItemViewController.h */,
 				DC11489A1DC71E66002B0D0D /* PlayItemViewController.m */,
+				DC11489C1DC73190002B0D0D /* AVQueuePlayerViewController.h */,
+				DC11489D1DC73190002B0D0D /* AVQueuePlayerViewController.m */,
 			);
 			name = cusotm;
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 			files = (
 				DC1148981DC6FA13002B0D0D /* AVSynchronizedLayerController.m in Sources */,
 				DC50B99C1DC1FC2800F027EB /* ViewController.m in Sources */,
+				DC11489E1DC73190002B0D0D /* AVQueuePlayerViewController.m in Sources */,
 				DC50B9991DC1FC2800F027EB /* AppDelegate.m in Sources */,
 				DC1148951DC6F814002B0D0D /* PlayItemService.m in Sources */,
 				DC50B9C91DC1FDCA00F027EB /* CommonAVPlayer.m in Sources */,

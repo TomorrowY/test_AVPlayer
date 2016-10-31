@@ -11,9 +11,9 @@
 #import "AVSynchronizedLayerController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "PlayItemViewController.h"
+#import "AVQueuePlayerViewController.h"
 
 @interface ViewController ()
-
 
 @end
 
@@ -47,5 +47,12 @@
     PlayItemViewController *piVC = [[UIStoryboard storyboardWithName:@"AVPlayer" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([PlayItemViewController class])];
     [self.navigationController pushViewController:piVC animated:true];
 }
+
+- (IBAction)onAVQueuePlayerViewControllerClicked:(id)sender {
+    NSLog(@"AVQueuePlayerViewController");
+    AVQueuePlayerViewController *vc = [[UIStoryboard storyboardWithName:@"AVPlayer" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([AVQueuePlayerViewController class])];
+    [self.navigationController pushViewController:vc animated:true];
+}
+
 
 @end

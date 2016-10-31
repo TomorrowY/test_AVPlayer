@@ -114,6 +114,40 @@
             </objects>
             <point key="canvasLocation" x="-814" y="-12"/>
         </scene>
+        <!--Queue Player View Controller-->
+        <scene sceneID="2Lw-Di-MPv">
+            <objects>
+                <viewController storyboardIdentifier="AVQueuePlayerViewController" id="NDU-x7-FSy" customClass="AVQueuePlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Fn-rR-f6f"/>
+                        <viewControllerLayoutGuide type="bottom" id="eKG-Wt-69K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Lb-bx-VKM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BAE-Y8-JZL">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="zk2-h3-G9E"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BAE-Y8-JZL" firstAttribute="leading" secondItem="2Lb-bx-VKM" secondAttribute="leading" id="79f-qe-wAV"/>
+                            <constraint firstItem="BAE-Y8-JZL" firstAttribute="top" secondItem="7Fn-rR-f6f" secondAttribute="bottom" constant="100" id="G18-WA-dab"/>
+                            <constraint firstAttribute="trailing" secondItem="BAE-Y8-JZL" secondAttribute="trailing" id="zzh-XS-yEW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="displaySubView" destination="BAE-Y8-JZL" id="GJe-42-EMs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u8S-KQ-lKX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-844" y="713"/>
+        </scene>
         <!--Synchronized Layer Controller-->
         <scene sceneID="zXT-gE-bKD">
             <objects>

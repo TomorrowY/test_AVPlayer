@@ -10,9 +10,14 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface AVQueuePlayerViewController ()
+{
+    id _periodTimeObserver;
+}
+
 @property (weak, nonatomic) IBOutlet UIView *displaySubView;
 @property (nonatomic) AVQueuePlayer *queuePlayer;
 @property (weak, nonatomic) IBOutlet UIView *anotherSubView;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
 @end
 
@@ -29,6 +34,10 @@ static NSInteger initIndex = 0;
 - (void)initVariables {
     [self.displaySubView layoutIfNeeded];
     [self.anotherSubView layoutIfNeeded];
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_onPlaying:) name:@"AVPlayerItemPlaying" object:nil];
+
     
     NSMutableArray<AVPlayerItem *> * playerItems = [NSMutableArray<AVPlayerItem *> new];
     for (NSInteger index = 0 ; index < vedioNum; index++) {
@@ -57,6 +66,10 @@ static NSInteger initIndex = 0;
 
 - (IBAction)onPlayerClicked:(id)sender {
     [self.queuePlayer play];
+    
+    _periodTimeObserver = [self.queuePlayer addPeriodicTimeObserverForInterval:CMTimeMake(1, 1) queue:NULL usingBlock:^(CMTime time) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"AVPlayerItemPlaying" object:nil];
+    }];
 }
 
 - (IBAction)onPauseClicked:(id)sender {
@@ -66,6 +79,11 @@ static NSInteger initIndex = 0;
 - (IBAction)onNextClicked:(id)sender {
     NSLog(@"next ");
     [self.queuePlayer advanceToNextItem];
+    
+    if (self.queuePlayer.items == 0) {
+        NSLog(@"所有视频已经播放完");
+        return;
+    }
     if (self.queuePlayer.items.count == 1) {
         NSLog(@"只剩下一个了");
         for (NSInteger index = 0 ; index < vedioNum; index++) {
@@ -97,7 +115,18 @@ static NSInteger initIndex = 0;
             [self.queuePlayer insertItem:playItems[index] afterItem:nil];
         }
     }
-    
+}
+
+- (void)_onPlaying:(NSNotification *)notification {
+    CMTime time = self.queuePlayer.currentItem.duration;
+    NSLog(@"time is : timescale:%d,timeValue: %lld",time.timescale,time.value);
+    if (time.timescale == 0) {
+        return;
+    }
+    NSInteger wholeSecond = time.value / time.timescale;
+    NSInteger min = wholeSecond / 60;
+    NSInteger second = wholeSecond%60 ;
+    self.timeLabel.text = [NSString stringWithFormat:@"当前片段时长: %ld:%ld",(long)min,(long)second];
 }
 
 @end

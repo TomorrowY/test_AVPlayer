@@ -162,6 +162,11 @@
                                     <action selector="onPrevioustClicked:" destination="NDU-x7-FSy" eventType="touchUpInside" id="PY7-vy-U8o"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrO-42-fmk">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -169,11 +174,13 @@
                             <constraint firstItem="BAE-Y8-JZL" firstAttribute="leading" secondItem="2Lb-bx-VKM" secondAttribute="leading" id="79f-qe-wAV"/>
                             <constraint firstItem="kXA-OD-Gyy" firstAttribute="leading" secondItem="cLM-Rx-kH1" secondAttribute="trailing" constant="10" id="Fs0-HB-HeZ"/>
                             <constraint firstItem="BAE-Y8-JZL" firstAttribute="top" secondItem="7Fn-rR-f6f" secondAttribute="bottom" constant="100" id="G18-WA-dab"/>
+                            <constraint firstItem="vrO-42-fmk" firstAttribute="top" secondItem="cLM-Rx-kH1" secondAttribute="bottom" constant="10" id="Gk4-tu-Cya"/>
                             <constraint firstItem="cLM-Rx-kH1" firstAttribute="width" secondItem="kXA-OD-Gyy" secondAttribute="width" id="HMb-2j-s8h"/>
                             <constraint firstItem="GNJ-Af-zHe" firstAttribute="top" secondItem="t0V-1s-hXQ" secondAttribute="top" id="J9e-Rf-bMX"/>
                             <constraint firstItem="t0V-1s-hXQ" firstAttribute="width" secondItem="GNJ-Af-zHe" secondAttribute="width" id="KRo-6j-63j"/>
                             <constraint firstItem="t0V-1s-hXQ" firstAttribute="leading" secondItem="kXA-OD-Gyy" secondAttribute="trailing" constant="10" id="Mdt-F4-4zE"/>
                             <constraint firstAttribute="trailing" secondItem="GNJ-Af-zHe" secondAttribute="trailing" constant="10" id="SfQ-fj-dPb"/>
+                            <constraint firstAttribute="trailing" secondItem="vrO-42-fmk" secondAttribute="trailing" constant="10" id="VdO-KF-djW"/>
                             <constraint firstItem="kXA-OD-Gyy" firstAttribute="top" secondItem="cLM-Rx-kH1" secondAttribute="top" id="auG-9K-d5V"/>
                             <constraint firstItem="kXA-OD-Gyy" firstAttribute="width" secondItem="t0V-1s-hXQ" secondAttribute="width" id="bpI-TL-1EM"/>
                             <constraint firstItem="cLM-Rx-kH1" firstAttribute="top" secondItem="vq6-Vd-BBw" secondAttribute="bottom" constant="20" id="eWB-Da-2wD"/>
@@ -184,17 +191,19 @@
                             <constraint firstItem="cLM-Rx-kH1" firstAttribute="height" secondItem="kXA-OD-Gyy" secondAttribute="height" id="pct-D0-uqo"/>
                             <constraint firstItem="cLM-Rx-kH1" firstAttribute="leading" secondItem="2Lb-bx-VKM" secondAttribute="leading" constant="10" id="qYq-OI-y6M"/>
                             <constraint firstItem="vq6-Vd-BBw" firstAttribute="leading" secondItem="2Lb-bx-VKM" secondAttribute="leading" id="rgD-2f-kfu"/>
+                            <constraint firstItem="vrO-42-fmk" firstAttribute="leading" secondItem="2Lb-bx-VKM" secondAttribute="leading" constant="10" id="u03-WK-dm6"/>
                             <constraint firstAttribute="trailing" secondItem="BAE-Y8-JZL" secondAttribute="trailing" id="zzh-XS-yEW"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="anotherSubView" destination="vq6-Vd-BBw" id="jri-ZY-n6y"/>
                         <outlet property="displaySubView" destination="BAE-Y8-JZL" id="GJe-42-EMs"/>
+                        <outlet property="timeLabel" destination="vrO-42-fmk" id="JaB-rc-hMV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u8S-KQ-lKX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-844" y="713"/>
+            <point key="canvasLocation" x="-844" y="712.89355322338838"/>
         </scene>
         <!--Synchronized Layer Controller-->
         <scene sceneID="zXT-gE-bKD">

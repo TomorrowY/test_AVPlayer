@@ -10,7 +10,7 @@
         <!--视频播放-->
         <scene sceneID="Yq3-Ko-aWM">
             <objects>
-                <viewController storyboardIdentifier="CustomAVPlayer" id="cKi-g8-elE" customClass="CustomAVPlayer" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommonAVPlayer" id="cKi-g8-elE" customClass="CommonAVPlayer" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8sg-zi-CbA"/>
                         <viewControllerLayoutGuide type="bottom" id="ltK-4v-Qpg"/>
@@ -78,7 +78,93 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lad-XU-eCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-99" y="32"/>
+            <point key="canvasLocation" x="-92" y="-12"/>
+        </scene>
+        <!--Play Item View Controller-->
+        <scene sceneID="BjN-o2-FYX">
+            <objects>
+                <viewController storyboardIdentifier="PlayItemViewController" id="Q2N-cg-aA0" customClass="PlayItemViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V9t-HM-yh2"/>
+                        <viewControllerLayoutGuide type="bottom" id="nQ6-8g-H23"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X9r-oA-xLH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0qQ-OW-T3B" userLabel="sub View">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Pfv-IS-QRa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0qQ-OW-T3B" firstAttribute="top" secondItem="V9t-HM-yh2" secondAttribute="bottom" constant="100" id="2hy-at-Weq"/>
+                            <constraint firstAttribute="trailing" secondItem="0qQ-OW-T3B" secondAttribute="trailing" id="oaf-fm-fOJ"/>
+                            <constraint firstItem="0qQ-OW-T3B" firstAttribute="leading" secondItem="X9r-oA-xLH" secondAttribute="leading" id="uYI-aH-TJX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="subView" destination="0qQ-OW-T3B" id="jUm-dk-c8z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="81P-3B-s4a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-814" y="-12"/>
+        </scene>
+        <!--Synchronized Layer Controller-->
+        <scene sceneID="zXT-gE-bKD">
+            <objects>
+                <viewController storyboardIdentifier="AVSynchronizedLayerController" id="chn-wk-7nu" customClass="AVSynchronizedLayerController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aMz-jS-DTL"/>
+                        <viewControllerLayoutGuide type="bottom" id="LXk-mD-BJA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ddZ-MF-Y3W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7BO-jR-acS">
+                                <frame key="frameInset" minX="37" minY="82" width="117" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="play"/>
+                                <connections>
+                                    <action selector="onPlayerClicked:" destination="chn-wk-7nu" eventType="touchUpInside" id="t9n-5W-jl4"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ArM-Nj-iMi" userLabel="subView0">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="loj-2b-7Nw"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOv-Zy-Xg0" userLabel="subView1">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9bf-hb-JQr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UOv-Zy-Xg0" secondAttribute="trailing" id="MP8-69-nM5"/>
+                            <constraint firstItem="ArM-Nj-iMi" firstAttribute="top" secondItem="aMz-jS-DTL" secondAttribute="bottom" constant="100" id="UGC-kU-e8z"/>
+                            <constraint firstItem="UOv-Zy-Xg0" firstAttribute="leading" secondItem="ddZ-MF-Y3W" secondAttribute="leading" id="Yb6-0k-dYh"/>
+                            <constraint firstItem="UOv-Zy-Xg0" firstAttribute="top" secondItem="aMz-jS-DTL" secondAttribute="bottom" constant="210" id="ccU-DR-AP9"/>
+                            <constraint firstItem="ArM-Nj-iMi" firstAttribute="leading" secondItem="ddZ-MF-Y3W" secondAttribute="leading" id="rDq-oI-hDL"/>
+                            <constraint firstAttribute="trailing" secondItem="ArM-Nj-iMi" secondAttribute="trailing" id="rdM-FF-RSo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="subView" destination="ArM-Nj-iMi" id="usf-Zp-YwV"/>
+                        <outlet property="subView1" destination="UOv-Zy-Xg0" id="sdD-K8-5QK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JzZ-OM-Bm8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="679" y="-12"/>
         </scene>
     </scenes>
     <resources>

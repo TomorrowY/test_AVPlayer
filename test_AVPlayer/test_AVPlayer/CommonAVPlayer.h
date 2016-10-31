@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BasicViewController.h"
 
-@interface CustomAVPlayer : BasicViewController
+@interface CommonAVPlayer : BasicViewController
 
 @end
  

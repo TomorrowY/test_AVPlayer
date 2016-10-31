@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC1148951DC6F814002B0D0D /* PlayItemService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1148941DC6F814002B0D0D /* PlayItemService.m */; };
+		DC1148981DC6FA13002B0D0D /* AVSynchronizedLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1148971DC6FA13002B0D0D /* AVSynchronizedLayerController.m */; };
+		DC11489B1DC71E66002B0D0D /* PlayItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11489A1DC71E66002B0D0D /* PlayItemViewController.m */; };
 		DC50B9961DC1FC2800F027EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC50B9951DC1FC2800F027EB /* main.m */; };
 		DC50B9991DC1FC2800F027EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC50B9981DC1FC2800F027EB /* AppDelegate.m */; };
 		DC50B99C1DC1FC2800F027EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC50B99B1DC1FC2800F027EB /* ViewController.m */; };
@@ -15,7 +18,7 @@
 		DC50B9A41DC1FC2800F027EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC50B9A21DC1FC2800F027EB /* LaunchScreen.storyboard */; };
 		DC50B9AF1DC1FC2800F027EB /* test_AVPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC50B9AE1DC1FC2800F027EB /* test_AVPlayerTests.m */; };
 		DC50B9BA1DC1FC2800F027EB /* test_AVPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC50B9B91DC1FC2800F027EB /* test_AVPlayerUITests.m */; };
-		DC50B9C91DC1FDCA00F027EB /* CustomAVPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DC50B9C81DC1FDCA00F027EB /* CustomAVPlayer.m */; };
+		DC50B9C91DC1FDCA00F027EB /* CommonAVPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DC50B9C81DC1FDCA00F027EB /* CommonAVPlayer.m */; };
 		DC50B9CC1DC1FDEA00F027EB /* AVPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC50B9CB1DC1FDEA00F027EB /* AVPlayer.storyboard */; };
 		DCB9B1261DC3369500443D3C /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB9B1251DC3369500443D3C /* BasicViewController.m */; };
 /* End PBXBuildFile section */
@@ -38,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC1148931DC6F814002B0D0D /* PlayItemService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayItemService.h; sourceTree = "<group>"; };
+		DC1148941DC6F814002B0D0D /* PlayItemService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayItemService.m; sourceTree = "<group>"; };
+		DC1148961DC6FA13002B0D0D /* AVSynchronizedLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSynchronizedLayerController.h; sourceTree = "<group>"; };
+		DC1148971DC6FA13002B0D0D /* AVSynchronizedLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSynchronizedLayerController.m; sourceTree = "<group>"; };
+		DC1148991DC71E65002B0D0D /* PlayItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayItemViewController.h; sourceTree = "<group>"; };
+		DC11489A1DC71E66002B0D0D /* PlayItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayItemViewController.m; sourceTree = "<group>"; };
 		DC50B9911DC1FC2800F027EB /* test_AVPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test_AVPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC50B9951DC1FC2800F027EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DC50B9971DC1FC2800F027EB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,8 +63,8 @@
 		DC50B9B51DC1FC2800F027EB /* test_AVPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test_AVPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC50B9B91DC1FC2800F027EB /* test_AVPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test_AVPlayerUITests.m; sourceTree = "<group>"; };
 		DC50B9BB1DC1FC2800F027EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC50B9C71DC1FDCA00F027EB /* CustomAVPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAVPlayer.h; sourceTree = "<group>"; };
-		DC50B9C81DC1FDCA00F027EB /* CustomAVPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAVPlayer.m; sourceTree = "<group>"; };
+		DC50B9C71DC1FDCA00F027EB /* CommonAVPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonAVPlayer.h; sourceTree = "<group>"; };
+		DC50B9C81DC1FDCA00F027EB /* CommonAVPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonAVPlayer.m; sourceTree = "<group>"; };
 		DC50B9CB1DC1FDEA00F027EB /* AVPlayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AVPlayer.storyboard; sourceTree = "<group>"; };
 		DCB9B1241DC3369500443D3C /* BasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicViewController.h; sourceTree = "<group>"; };
 		DCB9B1251DC3369500443D3C /* BasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicViewController.m; sourceTree = "<group>"; };
@@ -152,11 +161,17 @@
 		DC50B9CA1DC1FDD100F027EB /* cusotm */ = {
 			isa = PBXGroup;
 			children = (
-				DC50B9C71DC1FDCA00F027EB /* CustomAVPlayer.h */,
-				DC50B9C81DC1FDCA00F027EB /* CustomAVPlayer.m */,
+				DC50B9C71DC1FDCA00F027EB /* CommonAVPlayer.h */,
+				DC50B9C81DC1FDCA00F027EB /* CommonAVPlayer.m */,
 				DC50B9CB1DC1FDEA00F027EB /* AVPlayer.storyboard */,
 				DCB9B1241DC3369500443D3C /* BasicViewController.h */,
 				DCB9B1251DC3369500443D3C /* BasicViewController.m */,
+				DC1148931DC6F814002B0D0D /* PlayItemService.h */,
+				DC1148941DC6F814002B0D0D /* PlayItemService.m */,
+				DC1148961DC6FA13002B0D0D /* AVSynchronizedLayerController.h */,
+				DC1148971DC6FA13002B0D0D /* AVSynchronizedLayerController.m */,
+				DC1148991DC71E65002B0D0D /* PlayItemViewController.h */,
+				DC11489A1DC71E66002B0D0D /* PlayItemViewController.m */,
 			);
 			name = cusotm;
 			sourceTree = "<group>";
@@ -298,11 +313,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC1148981DC6FA13002B0D0D /* AVSynchronizedLayerController.m in Sources */,
 				DC50B99C1DC1FC2800F027EB /* ViewController.m in Sources */,
 				DC50B9991DC1FC2800F027EB /* AppDelegate.m in Sources */,
-				DC50B9C91DC1FDCA00F027EB /* CustomAVPlayer.m in Sources */,
+				DC1148951DC6F814002B0D0D /* PlayItemService.m in Sources */,
+				DC50B9C91DC1FDCA00F027EB /* CommonAVPlayer.m in Sources */,
 				DCB9B1261DC3369500443D3C /* BasicViewController.m in Sources */,
 				DC50B9961DC1FC2800F027EB /* main.m in Sources */,
+				DC11489B1DC71E66002B0D0D /* PlayItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

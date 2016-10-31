@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "CustomAVPlayer.h"
+#import "CommonAVPlayer.h"
+#import "AVSynchronizedLayerController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "PlayItemViewController.h"
 
 @interface ViewController ()
 
@@ -19,9 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    
-    
+        
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,13 +29,23 @@
 }
 
 - (IBAction)toCustomAvPlayerClicked:(id)sender {
-    CustomAVPlayer *CAVPlayer = [[UIStoryboard storyboardWithName:@"AVPlayer" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([CustomAVPlayer class])];
+    CommonAVPlayer *CAVPlayer = [[UIStoryboard storyboardWithName:@"AVPlayer" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([CommonAVPlayer class])];
     if (self.navigationController) {
         [self.navigationController pushViewController:CAVPlayer animated:true];
     }
     else{
         [self presentViewController:CAVPlayer animated:true completion:nil];
     }
+}
+
+- (IBAction)onAVSynchronizedClicked:(id)sender {
+    AVSynchronizedLayerController *slCV = [[UIStoryboard storyboardWithName:@"AVPlayer" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([AVSynchronizedLayerController class])];
+    [self.navigationController pushViewController:slCV animated:true];
+}
+
+- (IBAction)onPlayItemClicked:(id)sender {
+    PlayItemViewController *piVC = [[UIStoryboard storyboardWithName:@"AVPlayer" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([PlayItemViewController class])];
+    [self.navigationController pushViewController:piVC animated:true];
 }
 
 @end

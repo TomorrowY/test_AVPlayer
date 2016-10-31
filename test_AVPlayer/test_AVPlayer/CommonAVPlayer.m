@@ -6,13 +6,13 @@
 //  Copyright © 2016年 felix. All rights reserved.
 //
 
-#import "CustomAVPlayer.h"
+#import "CommonAVPlayer.h"
 #import <AVFoundation/AVFoundation.h>
 
 #define NavigationBar_Height 64
 #define Top_Height_Zero 0
 
-@interface CustomAVPlayer ()
+@interface CommonAVPlayer ()
 {
     BOOL _hasRotate;
 }
@@ -26,7 +26,7 @@
 
 @end
 
-@implementation CustomAVPlayer
+@implementation CommonAVPlayer
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -116,7 +116,6 @@
     else{
         [self.player pause];
     }
- 
 }
 
 - (void)didReceiveMemoryWarning {

@@ -21,9 +21,25 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fb-3g-svz">
                                 <frame key="frameInset" minX="20" minY="70" width="200" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="toCustomAVPlayer"/>
+                                <state key="normal" title="toCommonAVPlayer"/>
                                 <connections>
                                     <action selector="toCustomAvPlayerClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Bn-XK-G0J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTi-Ye-AYy">
+                                <frame key="frameInset" minX="20" minY="108" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="toAVSynchronizedLayer"/>
+                                <connections>
+                                    <action selector="onAVSynchronizedClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VpL-w9-gZN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDV-OY-muY">
+                                <frame key="frameInset" minX="20" minY="146" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="playItem"/>
+                                <connections>
+                                    <action selector="onPlayItemClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R4m-Lh-u14"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -33,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="826" y="124"/>
+            <point key="canvasLocation" x="824.79999999999995" y="123.68815592203899"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ROb-HH-YwE">

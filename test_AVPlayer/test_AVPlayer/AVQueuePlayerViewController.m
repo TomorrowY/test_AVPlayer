@@ -16,6 +16,9 @@
 
 @end
 
+static NSInteger vedioNum = 3;
+static NSInteger initIndex = 0;
+
 @implementation AVQueuePlayerViewController
 
 - (void)viewDidLoad {
@@ -28,7 +31,7 @@
     [self.anotherSubView layoutIfNeeded];
     
     NSMutableArray<AVPlayerItem *> * playerItems = [NSMutableArray<AVPlayerItem *> new];
-    for (NSInteger index =0 ; index < 3; index++) {
+    for (NSInteger index = 0 ; index < vedioNum; index++) {
         AVAsset *asset = [AVAsset assetWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:8000/movie/test%ld.mp4",(long)index]]];
         [playerItems addObject:[AVPlayerItem playerItemWithAsset:asset]];
     }
@@ -61,11 +64,40 @@
 }
 
 - (IBAction)onNextClicked:(id)sender {
-    NSLog(@"next");
+    NSLog(@"next ");
+    [self.queuePlayer advanceToNextItem];
+    if (self.queuePlayer.items.count == 1) {
+        NSLog(@"只剩下一个了");
+        for (NSInteger index = 0 ; index < vedioNum; index++) {
+            AVAsset *asset = [AVAsset assetWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:8000/movie/test%ld.mp4",(long)index]]];
+            AVPlayerItem *item = [AVPlayerItem playerItemWithAsset:asset];
+            [self.queuePlayer insertItem:item afterItem:nil];
+        }
+    }
 }
 
 - (IBAction)onPrevioustClicked:(id)sender {
-    NSLog(@"previous");
+    NSLog(@"previous ");
+    NSArray *playItems = [self.queuePlayer items];
+    
+    if (playItems.count == vedioNum) {
+        AVPlayerItem *previousItem = self.queuePlayer.items.lastObject;
+        [previousItem seekToTime:kCMTimeZero];
+        [self.queuePlayer removeAllItems];
+        [self.queuePlayer insertItem:previousItem afterItem:nil];
+        for (NSInteger index =0 ; index <playItems.count -1; index ++) {
+            [self.queuePlayer insertItem:playItems[index] afterItem:nil];
+        }
+    }else{
+        AVPlayerItem *previousItem = [AVPlayerItem playerItemWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:8000/movie/test%ld.mp4",(long)(vedioNum - playItems.count -1)]]];
+        [previousItem seekToTime:kCMTimeZero];
+        [self.queuePlayer removeAllItems];
+        [self.queuePlayer insertItem:previousItem afterItem:nil];
+        for (NSInteger index =0 ; index <playItems.count ; index ++) {
+            [self.queuePlayer insertItem:playItems[index] afterItem:nil];
+        }
+    }
+    
 }
 
 @end

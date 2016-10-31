@@ -27,15 +27,15 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTi-Ye-AYy">
-                                <frame key="frameInset" minX="20" minY="108" width="200" height="30"/>
+                                <frame key="frameInset" minX="20" minY="108" width="241" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="toAVSynchronizedLayer"/>
+                                <state key="normal" title="toAVSynchronizedLayer(issue)"/>
                                 <connections>
                                     <action selector="onAVSynchronizedClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VpL-w9-gZN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDV-OY-muY">
-                                <frame key="frameInset" minX="20" minY="146" width="200" height="30"/>
+                                <frame key="frameInset" minX="20" minY="146" width="86" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="playItem"/>
                                 <connections>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NH3-gT-z1m">
-                                <frame key="frameInset" minX="20" minY="184" width="200" height="30"/>
+                                <frame key="frameInset" minX="20" minY="184" width="231" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="AVQueuePlayerViewController"/>
                                 <connections>

@@ -49,14 +49,6 @@ static NSInteger initIndex = 0;
     playerLayer.frame = self.displaySubView.bounds;
     [self.displaySubView.layer insertSublayer:playerLayer atIndex:0];
     
-   /*
-    AVPlayerItem *playerItem = [AVPlayerItem playerItemWithAsset:[AVAsset assetWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:8000/movie/test0.mp4"]]]];
-    CALayer *superLayer =  self.displaySubView.layer;
-    AVSynchronizedLayer *syncLayer = [AVSynchronizedLayer synchronizedLayerWithPlayerItem:playerItem];
-    [syncLayer addSublayer:self.anotherSubView.layer];
-    [superLayer addSublayer:syncLayer];
-    */
-    
     [self.queuePlayer pause];
 }
 
@@ -67,9 +59,11 @@ static NSInteger initIndex = 0;
 - (IBAction)onPlayerClicked:(id)sender {
     [self.queuePlayer play];
     
+    /*
     _periodTimeObserver = [self.queuePlayer addPeriodicTimeObserverForInterval:CMTimeMake(1, 1) queue:NULL usingBlock:^(CMTime time) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"AVPlayerItemPlaying" object:nil];
     }];
+     */
 }
 
 - (IBAction)onPauseClicked:(id)sender {
@@ -78,12 +72,12 @@ static NSInteger initIndex = 0;
 
 - (IBAction)onNextClicked:(id)sender {
     NSLog(@"next ");
-    [self.queuePlayer advanceToNextItem];
     
     if (self.queuePlayer.items == 0) {
         NSLog(@"所有视频已经播放完");
         return;
     }
+    
     if (self.queuePlayer.items.count == 1) {
         NSLog(@"只剩下一个了");
         for (NSInteger index = 0 ; index < vedioNum; index++) {
@@ -92,6 +86,9 @@ static NSInteger initIndex = 0;
             [self.queuePlayer insertItem:item afterItem:nil];
         }
     }
+    
+    [self.queuePlayer advanceToNextItem];
+
 }
 
 - (IBAction)onPrevioustClicked:(id)sender {
@@ -119,11 +116,12 @@ static NSInteger initIndex = 0;
 
 - (void)_onPlaying:(NSNotification *)notification {
     CMTime time = self.queuePlayer.currentItem.duration;
-    NSLog(@"time is : timescale:%d,timeValue: %lld",time.timescale,time.value);
+//    NSLog(@"time is : timescale:%d,timeValue: %lld",time.timescale,time.value);
     if (time.timescale == 0) {
         return;
     }
     NSInteger wholeSecond = time.value / time.timescale;
+    NSLog(@"time : %ld",(long)wholeSecond);
     NSInteger min = wholeSecond / 60;
     NSInteger second = wholeSecond%60 ;
     self.timeLabel.text = [NSString stringWithFormat:@"当前片段时长: %ld:%ld",(long)min,(long)second];

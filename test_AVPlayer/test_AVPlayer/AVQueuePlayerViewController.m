@@ -127,4 +127,6 @@ static NSInteger initIndex = 0;
     self.timeLabel.text = [NSString stringWithFormat:@"当前片段时长: %ld:%ld",(long)min,(long)second];
 }
 
+
+
 @end

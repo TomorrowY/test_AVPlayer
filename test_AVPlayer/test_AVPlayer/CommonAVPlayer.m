@@ -24,6 +24,8 @@
 @property (nonatomic) AVPlayerLayer *playerLayer;
 @property (weak, nonatomic) IBOutlet UIButton *playerbtn;
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 @end
 
 @implementation CommonAVPlayer
@@ -116,6 +118,22 @@
     else{
         [self.player pause];
     }
+}
+
+- (IBAction)onCaptureClicked:(id)sender {
+    
+    AVURLAsset *urlAsset = [[AVURLAsset alloc] initWithURL:[NSURL URLWithString:@"http://localhost:8000/movie/test1.mp4"] options:nil];
+    AVAssetImageGenerator *generator = [[AVAssetImageGenerator alloc] initWithAsset:urlAsset];
+    NSError *error = nil;
+//    CMTime time = CMTimeMakeWithSeconds(10.0, 60);
+    CMTime time = CMTimeMake(600.0, 60);
+    CGImageRef imageRef = [generator copyCGImageAtTime:time actualTime:NULL error:&error];
+    
+    if(error.description != nil) {
+        NSLog(@"Error:(thumbnailFromVideoAtPath:)%@",error.description);
+        return ;
+    }
+    self.imageView.image = [UIImage imageWithCGImage:imageRef];
 }
 
 - (void)didReceiveMemoryWarning {

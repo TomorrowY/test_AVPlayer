@@ -22,7 +22,7 @@
 @end
 
 static NSInteger vedioNum = 3;
-static NSInteger initIndex = 0;
+//static NSInteger initIndex = 0;
 
 @implementation AVQueuePlayerViewController
 

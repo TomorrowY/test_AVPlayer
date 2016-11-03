@@ -315,9 +315,33 @@
                                     <constraint firstAttribute="height" constant="200" id="AXt-f0-DsU"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vmj-WA-uIt">
+                                <rect key="frame" x="24" y="244" width="83" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="hWF-A6-7Kd"/>
+                                </constraints>
+                                <state key="normal" title="录制"/>
+                                <connections>
+                                    <action selector="onRecorderClicked:" destination="SqW-Zp-bSE" eventType="touchUpInside" id="cwA-g4-eKO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imp-gO-Tnt" userLabel="录制完成">
+                                <rect key="frame" x="189" y="244" width="91" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="PxU-Kf-J0c"/>
+                                </constraints>
+                                <state key="normal" title="录制完成"/>
+                                <connections>
+                                    <action selector="onRecordFinishedClicked:" destination="SqW-Zp-bSE" eventType="touchUpInside" id="H39-TJ-j9x"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Vmj-WA-uIt" firstAttribute="top" secondItem="MTm-mb-alS" secondAttribute="bottom" constant="44" id="3AR-zU-ggh"/>
+                            <constraint firstItem="Vmj-WA-uIt" firstAttribute="leading" secondItem="9E9-Y1-Nau" secondAttribute="leading" constant="24" id="UUo-jz-OBr"/>
+                            <constraint firstItem="Imp-gO-Tnt" firstAttribute="top" secondItem="Vmj-WA-uIt" secondAttribute="top" id="Wgq-Zx-HZH"/>
+                            <constraint firstItem="Imp-gO-Tnt" firstAttribute="leading" secondItem="Vmj-WA-uIt" secondAttribute="trailing" constant="82" id="WmY-dg-nJO"/>
                             <constraint firstItem="MTm-mb-alS" firstAttribute="top" secondItem="69d-vS-UFj" secondAttribute="bottom" id="bZL-S5-6TT"/>
                             <constraint firstAttribute="trailing" secondItem="MTm-mb-alS" secondAttribute="trailing" id="pVc-iM-4ZV"/>
                             <constraint firstItem="MTm-mb-alS" firstAttribute="leading" secondItem="9E9-Y1-Nau" secondAttribute="leading" id="w5g-7e-HVD"/>
@@ -330,7 +354,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WbN-cX-Puw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-66" y="632"/>
+            <point key="canvasLocation" x="-66.400000000000006" y="631.93403298350825"/>
         </scene>
     </scenes>
     <resources>

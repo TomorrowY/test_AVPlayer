@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC0C7B431DCAE081005DA6EA /* VedioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0C7B421DCAE081005DA6EA /* VedioRecorder.m */; };
 		DC1148951DC6F814002B0D0D /* PlayItemService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1148941DC6F814002B0D0D /* PlayItemService.m */; };
 		DC1148981DC6FA13002B0D0D /* AVSynchronizedLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1148971DC6FA13002B0D0D /* AVSynchronizedLayerController.m */; };
 		DC11489B1DC71E66002B0D0D /* PlayItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11489A1DC71E66002B0D0D /* PlayItemViewController.m */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC0C7B411DCAE081005DA6EA /* VedioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VedioRecorder.h; sourceTree = "<group>"; };
+		DC0C7B421DCAE081005DA6EA /* VedioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VedioRecorder.m; sourceTree = "<group>"; };
 		DC1148931DC6F814002B0D0D /* PlayItemService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayItemService.h; sourceTree = "<group>"; };
 		DC1148941DC6F814002B0D0D /* PlayItemService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayItemService.m; sourceTree = "<group>"; };
 		DC1148961DC6FA13002B0D0D /* AVSynchronizedLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSynchronizedLayerController.h; sourceTree = "<group>"; };
@@ -98,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC0C7B401DCAE064005DA6EA /* vedio recorder */ = {
+			isa = PBXGroup;
+			children = (
+				DC0C7B411DCAE081005DA6EA /* VedioRecorder.h */,
+				DC0C7B421DCAE081005DA6EA /* VedioRecorder.m */,
+			);
+			name = "vedio recorder";
+			sourceTree = "<group>";
+		};
 		DC50B9881DC1FC2800F027EB = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +133,7 @@
 		DC50B9931DC1FC2800F027EB /* test_AVPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				DC0C7B401DCAE064005DA6EA /* vedio recorder */,
 				DC50B9CA1DC1FDD100F027EB /* cusotm */,
 				DC50B9971DC1FC2800F027EB /* AppDelegate.h */,
 				DC50B9981DC1FC2800F027EB /* AppDelegate.m */,
@@ -243,7 +256,7 @@
 		DC50B9891DC1FC2800F027EB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = felix;
 				TargetAttributes = {
 					DC50B9901DC1FC2800F027EB = {
@@ -325,6 +338,7 @@
 				DC1148951DC6F814002B0D0D /* PlayItemService.m in Sources */,
 				DC50B9C91DC1FDCA00F027EB /* CommonAVPlayer.m in Sources */,
 				DCB9B1261DC3369500443D3C /* BasicViewController.m in Sources */,
+				DC0C7B431DCAE081005DA6EA /* VedioRecorder.m in Sources */,
 				DC50B9961DC1FC2800F027EB /* main.m in Sources */,
 				DC11489B1DC71E66002B0D0D /* PlayItemViewController.m in Sources */,
 			);
@@ -399,6 +413,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -421,7 +436,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -447,6 +462,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -463,7 +479,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

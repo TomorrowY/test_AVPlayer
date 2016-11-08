@@ -10,3 +10,8 @@ AVPlayerItem进行实现相应的item，以及还有和AVAsset之间的关系；
 FFmpeg的处理；
 
 还有就是音频处理；
+
+
+#pragma mark -- 视频录制
+1.视频上面的处理，av的内容，应该是注意一个session和connection之间的关系；
+2.注意添加的主要设备的内容，开发的先后顺序
